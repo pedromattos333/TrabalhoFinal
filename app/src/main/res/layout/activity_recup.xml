@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/fundo_camuflado"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".view.RecupActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/RecupSenha"
+        android:background="#e2dfdf"
+        android:textColor="#151414"
+        android:textStyle="bold"
+        android:textSize="32sp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:padding="2dp"
+        android:hint="@string/hint_email"
+       android:background="#fff"
+        android:textColorHint="#000"
+        android:textColor="#131313"
+        android:id="@+id/edit_text_recuperacao"
+        android:textSize="20dp">
+    </EditText>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/button_recuperar"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="#0E0D0D"
+        android:background="#D0D1D3"
+        android:onClick="recuperar"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/button_voltar"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="#0E0D0D"
+        android:background="#D0D1D3"
+        android:onClick="voltar"/>
+
+
+</LinearLayout>
