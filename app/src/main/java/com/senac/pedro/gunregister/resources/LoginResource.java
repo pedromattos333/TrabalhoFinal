@@ -37,7 +37,7 @@ public class LoginResource {
         alertDialog.show();
         client = new AsyncHttpClient();
         // Inserir o header e testar na api
-        client.get(BASE_URL + URL + "/" + email + "/" + senha, new AsyncHttpResponseHandler() {
+        client.get("http://192.168.0.12:8080/login" + "/" + email + "/" + senha, new AsyncHttpResponseHandler() {
 
             @Override
             public void onSuccess(int i, Header[] headers, byte[] bytes) {

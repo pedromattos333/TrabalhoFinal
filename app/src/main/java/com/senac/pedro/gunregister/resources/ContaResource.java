@@ -20,7 +20,7 @@ import cz.msebera.android.httpclient.entity.StringEntity;
 public class ContaResource {
 
     private static final String BASE_URL = ApiParams.getURL();
-    private static final String URL = "/usuario";
+    private static final String URL = "usuario";
     private AsyncHttpClient client;
     private Conta usuario;
     private Activity activity;
@@ -38,7 +38,7 @@ public class ContaResource {
         dlgCarregando.show();
 
         client = new AsyncHttpClient();
-        client.get(BASE_URL + URL, new AsyncHttpResponseHandler() {
+        client.get("http://192.168.0.12:8080/usuario", new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int i, Header[] headers, byte[] bytes) {
                 String resJSON = new String(bytes);
@@ -65,7 +65,7 @@ public class ContaResource {
         }
 
         client = new AsyncHttpClient();
-        client.post(activity.getApplicationContext(), BASE_URL + URL, entity, "application/json", new AsyncHttpResponseHandler() {
+        client.post(activity.getApplicationContext(), "http://192.168.0.12:8080/usuario", entity, "application/json", new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int i, Header[] headers, byte[] bytes) {
                 String resJSON = new String(bytes);
